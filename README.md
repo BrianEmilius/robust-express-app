@@ -8,7 +8,7 @@ This repository is an exploration into what practices are necessary and advisabl
 
 ## What does "robustness" mean?
 
-We usually expect an application that runs in production to have almost 100% uptime and very few bugs. This is a two-sided problem that (a) speaks to the environment in which the application runs (servers, networks, clients), and (b) is about the quality of code.
+We usually expect an application that runs in production to have almost 100% uptime and very few bugs. This is a two-sided problem that (a) speaks to the environment in which the application runs such as servers, networks, clients, and (b) is about the quality of code.
 
 In order for an application to be robust it should follow these guidelines.
 
