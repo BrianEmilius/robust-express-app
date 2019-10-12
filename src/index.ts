@@ -1,6 +1,8 @@
 import express from "express"
 import server from "./server"
 import viewEngine from "./config/view-engine"
+import { activityLogging, errorLogging, debug } from "./middleware/logging"
+import { setRequestId, ERR404, ERR500 } from "./middleware/errorPages"
 import { readdirSync } from "fs"
 import { join } from "path"
 const app = express(),
@@ -8,10 +10,15 @@ const app = express(),
 
 viewEngine(app)
 
+router.use(activityLogging)
+router.use(setRequestId)
 readdirSync(join(__dirname, "routes")).forEach(function(file) {
 	require(join(__dirname, "routes", file))(router)
 })
+router.use(ERR404)
+router.use(errorLogging)
+router.use(ERR500)
 
 app.use(router)
 
-server(app)
+server(app, debug)
