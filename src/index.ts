@@ -3,12 +3,14 @@ import server from "./server"
 import viewEngine from "./config/view-engine"
 import { activityLogging, errorLogging, debug } from "./middleware/logging"
 import { setRequestId, ERR404, ERR500 } from "./middleware/errorPages"
+import staticFolder from "./config/static-folder"
 import { readdirSync } from "fs"
 import { join } from "path"
 const app = express(),
 			router = express.Router()
 
 viewEngine(app)
+staticFolder(app)
 
 router.use(activityLogging)
 router.use(setRequestId)
