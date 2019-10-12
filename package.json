@@ -5,8 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "tsc": "tsc",
-    "dev": "ts-node-dev --respawn --transpileOnly ./src/index.ts",
-    "prod": "tsc && node ./dist/index.js",
+    "build": "gulp",
+    "dev": "nodemon ./dist/index",
     "test": "jest"
   },
   "repository": {
@@ -37,10 +37,15 @@
     "express-validator": "^6.2.0",
     "express-winston": "^4.0.1",
     "flash": "^1.1.0",
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^5.0.1",
     "ts-node-dev": "^1.0.0-pre.43",
     "typescript": "^3.6.4",
     "uid": "0.0.2",
     "winston": "^3.2.1",
     "winston-daily-rotate-file": "^4.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
   }
 }
