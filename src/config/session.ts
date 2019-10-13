@@ -9,7 +9,7 @@ export default function(app: e.Application) {
 	app.use(session({
 		store: new RedisStore({ client }),
 		secret: "not yet",
-		saveUninitialized: false,
+		saveUninitialized: true,
 		resave: false
 	}))
 }
