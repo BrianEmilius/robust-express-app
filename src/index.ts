@@ -4,13 +4,18 @@ import viewEngine from "./config/view-engine"
 import { activityLogging, errorLogging, debug } from "./middleware/logging"
 import { setRequestId, ERR404, ERR500 } from "./middleware/errorPages"
 import staticFolder from "./config/static-folder"
+import session from "./config/session"
+import sessionCheck from "./middleware/sessionCheck"
 import { readdirSync } from "fs"
 import { join } from "path"
 const app = express(),
 			router = express.Router()
 
+session(app)
 viewEngine(app)
 staticFolder(app)
+
+router.use(sessionCheck)
 
 router.use(activityLogging)
 router.use(setRequestId)
