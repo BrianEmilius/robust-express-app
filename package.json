@@ -4,9 +4,9 @@
   "description": "an exploration into what practices are necessary and advisable for running a robust ExpressJS application in production",
   "main": "src/index.ts",
   "scripts": {
-    "tsc": "tsc",
-    "build": "gulp",
-    "dev": "nodemon ./dist/index",
+    "dev": "npm i && npm-run-all --parallel dev:*",
+    "dev:build": "gulp dev",
+    "dev:nodemon": "nodemon dist/index",
     "test": "jest"
   },
   "repository": {
@@ -42,6 +42,7 @@
     "flash": "^1.1.0",
     "gulp": "^4.0.2",
     "gulp-typescript": "^5.0.1",
+    "npm-run-all": "^4.1.5",
     "redis": "^2.8.0",
     "ts-node-dev": "^1.0.0-pre.43",
     "typescript": "^3.6.4",

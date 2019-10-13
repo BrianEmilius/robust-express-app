@@ -28,7 +28,14 @@ function watchPublic() {
   return gulp.watch("src/public/**/*", { ignoreInitial: false }, public);
 }
 
-gulp.task("default", function(done) {
+gulp.task("build", function(done) {
+  typescript();
+  views();
+  public();
+  done();
+});
+
+gulp.task("dev", function(done) {
   watchTypescript();
   watchViews();
   watchPublic();
