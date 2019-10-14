@@ -2,9 +2,9 @@
 
 This repository is an exploration into what practices are necessary and advisable for running a robust ExpressJS application in production.
 
-[How to contribute](CONTRIBUTING.md)  
-[Code of conduct](CODE_OF_CONDUCT.md)  
-[List of contributors](CONTRIBUTORS.md)
+[How to contribute](.github/CONTRIBUTING.md)  
+[Code of conduct](.github/CODE_OF_CONDUCT.md)  
+[List of contributors](.github/CONTRIBUTORS.md)
 
 ## What does "robustness" mean?
 
