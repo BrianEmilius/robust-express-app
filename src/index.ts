@@ -9,7 +9,7 @@ import sessionCheck from "./middleware/sessionCheck"
 import { readdirSync } from "fs"
 import { join } from "path"
 const app = express(),
-			router = express.Router()
+	router = express.Router()
 
 session(app)
 viewEngine(app)

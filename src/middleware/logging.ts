@@ -3,9 +3,7 @@ import expressWinston from "express-winston"
 import DailyRotateFile from "winston-daily-rotate-file"
 
 export const activityLogging = expressWinston.logger({
-	transports: [
-		new Winston.transports.Console()
-	],
+	transports: [new Winston.transports.Console()],
 	meta: false,
 	expressFormat: true
 })
@@ -25,7 +23,5 @@ export const errorLogging = expressWinston.errorLogger({
 })
 
 export const debug = Winston.createLogger({
-	transports: [
-		new Winston.transports.Console()
-	]
+	transports: [new Winston.transports.Console()]
 })

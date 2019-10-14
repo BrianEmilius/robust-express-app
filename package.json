@@ -1,56 +1,77 @@
 {
-  "name": "robust-express-app",
-  "version": "0.0.0",
-  "description": "an exploration into what practices are necessary and advisable for running a robust ExpressJS application in production",
-  "main": "src/index.ts",
-  "scripts": {
-    "dev": "npm i && npm-run-all --parallel dev:*",
-    "dev:build": "gulp dev",
-    "dev:nodemon": "nodemon dist/index",
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BrianEmilius/robust-express-app.git"
-  },
-  "keywords": [
-    "expressjs",
-    "performance",
-    "security",
-    "testing"
-  ],
-  "author": "Brian Emilius <brian@brianemilius.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/BrianEmilius/robust-express-app/issues"
-  },
-  "homepage": "https://github.com/BrianEmilius/robust-express-app#readme",
-  "dependencies": {
-    "@types/express": "^4.17.1",
-    "@types/express-session": "^1.15.14",
-    "@types/node": "^12.7.12",
-    "@types/redis": "^2.8.14",
-    "@types/winston": "^2.4.4",
-    "connect-redis": "^4.0.3",
-    "ejs": "^2.7.1",
-    "express": "^4.17.1",
-    "express-ejs-extend": "0.0.1",
-    "express-formidable": "^1.2.0",
-    "express-session": "^1.17.0",
-    "express-validator": "^6.2.0",
-    "express-winston": "^4.0.1",
-    "flash": "^1.1.0",
-    "gulp": "^4.0.2",
-    "gulp-typescript": "^5.0.1",
-    "npm-run-all": "^4.1.5",
-    "redis": "^2.8.0",
-    "ts-node-dev": "^1.0.0-pre.43",
-    "typescript": "^3.6.4",
-    "uid": "0.0.2",
-    "winston": "^3.2.1",
-    "winston-daily-rotate-file": "^4.2.1"
-  },
-  "devDependencies": {
-    "nodemon": "^1.19.3"
-  }
+	"name": "robust-express-app",
+	"version": "0.0.0",
+	"description": "an exploration into what practices are necessary and advisable for running a robust ExpressJS application in production",
+	"main": "src/index.ts",
+	"scripts": {
+		"dev": "npm i && npm-run-all --parallel dev:*",
+		"dev:build": "gulp dev",
+		"dev:nodemon": "nodemon dist/index",
+		"test": "jest",
+		"lint": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}'",
+		"fix": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}' --fix --quiet"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/BrianEmilius/robust-express-app.git"
+	},
+	"keywords": [
+		"expressjs",
+		"performance",
+		"security",
+		"testing"
+	],
+	"author": "Brian Emilius <brian@brianemilius.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/BrianEmilius/robust-express-app/issues"
+	},
+	"homepage": "https://github.com/BrianEmilius/robust-express-app#readme",
+	"dependencies": {
+		"@types/express": "^4.17.1",
+		"@types/express-session": "^1.15.14",
+		"@types/node": "^12.7.12",
+		"@types/redis": "^2.8.14",
+		"@types/winston": "^2.4.4",
+		"connect-redis": "^4.0.3",
+		"ejs": "^2.7.1",
+		"express": "^4.17.1",
+		"express-ejs-extend": "0.0.1",
+		"express-formidable": "^1.2.0",
+		"express-session": "^1.17.0",
+		"express-validator": "^6.2.0",
+		"express-winston": "^4.0.1",
+		"flash": "^1.1.0",
+		"gulp": "^4.0.2",
+		"gulp-typescript": "^5.0.1",
+		"npm-run-all": "^4.1.5",
+		"redis": "^2.8.0",
+		"ts-node-dev": "^1.0.0-pre.43",
+		"typescript": "^3.6.4",
+		"uid": "0.0.2",
+		"winston": "^3.2.1",
+		"winston-daily-rotate-file": "^4.2.1"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^2.3.3",
+		"@typescript-eslint/parser": "^2.3.3",
+		"eslint": "^6.5.1",
+		"eslint-config-prettier": "^6.4.0",
+		"eslint-plugin-prettier": "^3.1.1",
+		"husky": "^3.0.9",
+		"lint-staged": "^9.4.2",
+		"nodemon": "^1.19.3",
+		"prettier": "^1.18.2"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{js,ts}": [
+			"npm run fix",
+			"git add"
+		]
+	}
 }
