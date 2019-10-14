@@ -28,6 +28,13 @@ Please keep the code format and styling to the format already provided in the ba
 * Pull Requests are reviewed on a regular basis by the project maintainer.
 * After feedback has been given we expect responses within two weeks. After two weeks we may close the pull request if it isn't showing any activity.
 
+## What kinds of contributions can you make?
+All kinds of contributions are welcome, but we will favour those that follow this project's vision of exploring what it means to build a robust production ready application.
+
+If you are uncertain whether your idea is a good feature for this project, open an issue and we can hash out your idea together.
+
+There are a few issues open that you can take a look at. Those marked with "good first issue" are meant for new-comers and beginners.
+
 ## Additional resources
 * [Code Of Conduct](CODE_OF_CONDUCT.md)
 * [Issue tracker](https://github.com/brianemilius/robust-express-app/issues)
