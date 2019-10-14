@@ -3,4 +3,8 @@
 ## Brian Emilius
 Author, Maintainer  
 GitHub: @BrianEmilius  
-Twitter: @BrianEmilius  
+Twitter: @BrianEmilius
+
+## Niko Heikkilä
+Contributor
+GitHub: @NikoHeikkila
