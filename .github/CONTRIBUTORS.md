@@ -6,5 +6,5 @@ GitHub: @BrianEmilius
 Twitter: @BrianEmilius
 
 ## Niko Heikkilä
-Contributor
+Contributor  
 GitHub: @NikoHeikkila
