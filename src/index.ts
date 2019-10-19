@@ -6,6 +6,7 @@ import { setRequestId, ERR404, ERR500 } from "./middleware/errorPages"
 import staticFolder from "./config/static-folder"
 import session from "./config/session"
 import sessionCheck from "./middleware/sessionCheck"
+import memoryCache from "./middleware/memoryCache"
 import { readdirSync } from "fs"
 import { join } from "path"
 const app = express(),
@@ -19,9 +20,13 @@ router.use(sessionCheck)
 
 router.use(activityLogging)
 router.use(setRequestId)
+
+router.use(memoryCache(5000))
+
 readdirSync(join(__dirname, "routes")).forEach(function(file) {
 	require(join(__dirname, "routes", file))(router)
 })
+
 router.use(ERR404)
 router.use(errorLogging)
 router.use(ERR500)
