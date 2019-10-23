@@ -8,3 +8,8 @@ Twitter: @BrianEmilius
 ## Niko Heikkilä
 Contributor  
 GitHub: @NikoHeikkila
+
+
+## Arman
+Contributor  
+GitHub: @onlywicked
