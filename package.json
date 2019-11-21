@@ -52,7 +52,7 @@
 		"typescript": "^3.7.2",
 		"uid": "0.0.2",
 		"winston": "^3.2.1",
-		"winston-daily-rotate-file": "^4.2.1"
+		"winston-daily-rotate-file": "^4.3.0"
 	},
 	"devDependencies": {
 		"@typescript-eslint/parser": "^2.8.0",
