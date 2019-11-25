@@ -35,7 +35,7 @@
 		"@types/redis": "^2.8.14",
 		"@types/winston": "^2.4.4",
 		"connect-redis": "^4.0.3",
-		"ejs": "^2.7.4",
+		"ejs": "^3.0.1",
 		"express": "^4.17.1",
 		"express-ejs-extend": "0.0.1",
 		"express-formidable": "^1.2.0",
